@@ -1,17 +1,25 @@
 import React from 'react';
 
 export default class ReadingTime extends React.Component {
-  static PropTypes = {
-    wordsPerMinute: React.PropTypes.number
-  }
+    static propTypes = {
+        wordsPerMinute: React.PropTypes.number
+    };
 
-  static defaultProps = {
-    wordsPerMinute: 250
-  }
+    static defaultProps = {
+      wordsPerMinute: 250
+    };
 
-  render(){
-    return (
-      <div></div>
-    )
-  }
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        readTime: 0
+      };
+    }
+
+    render() {
+      return (
+        <div>Hello it's ReadingTime!</div>
+      );
+    }
 }
