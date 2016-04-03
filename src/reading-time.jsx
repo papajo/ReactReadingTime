@@ -36,11 +36,14 @@ export default class ReadingTime extends React.Component {
     }
 
     render() {
+      const { props } = this;
+      const { readTime } = this.state;
+      const minutes = readTime === 1? 'minute': 'minutes';
       return (
-        <div>
+        <div {...props}>
           <p>
             Estimeated Read Time: <br /><br />
-            <span>{this.state.readTime}</span>
+            <span>{readTime} {minutes}</span>
           </p>
         </div>
       );
